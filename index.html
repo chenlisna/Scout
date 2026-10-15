@@ -1,0 +1,1956 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>童軍心・世界情：探索國際童軍與多元文化生活能力｜綜合活動領域童軍科教學教案與學習單</title>
+  <meta name="description" content="依據十二年國教課綱綜合活動領域童軍科核心素養與學習重點規劃之兩次課程教案與互動學習單。">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;600;700;800&family=Outfit:wght@500;600;700;800&display=swap"
+    rel="stylesheet">
+  <style>
+    :root {
+      --primary: #1b4332;
+      --primary-light: #2d6a4f;
+      --primary-dark: #081c15;
+      --accent: #d97706;
+      --accent-light: #f59e0b;
+      --accent-soft: #fef3c7;
+      --scout-purple: #4c1d95;
+      --scout-purple-light: #6d28d9;
+      --scout-purple-soft: #f5f3ff;
+      --bg-base: #f8fafc;
+      --surface: #ffffff;
+      --surface-elevated: #ffffff;
+      --border: #e2e8f0;
+      --border-strong: #cbd5e1;
+      --text-main: #0f172a;
+      --text-muted: #475569;
+      --text-soft: #64748b;
+      --tag-bg: #e2e8f0;
+      --radius-sm: 6px;
+      --radius-md: 10px;
+      --radius-lg: 16px;
+      --radius-xl: 24px;
+      --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+      --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.08), 0 2px 4px -2px rgba(0, 0, 0, 0.06);
+      --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.08), 0 4px 6px -4px rgba(0, 0, 0, 0.05);
+      --shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 8px 10px -6px rgba(0, 0, 0, 0.05);
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Noto Sans TC', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      background-color: var(--bg-base);
+      color: var(--text-main);
+      line-height: 1.7;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    /* Top Banner / Navbar */
+    .top-nav {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: rgba(255, 255, 255, 0.92);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--border);
+      box-shadow: var(--shadow-sm);
+    }
+
+    .nav-inner {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0.75rem 1.5rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 1rem;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      text-decoration: none;
+      color: var(--primary-dark);
+      font-weight: 700;
+      font-size: 1.125rem;
+    }
+
+    .brand-icon {
+      width: 36px;
+      height: 36px;
+      border-radius: var(--radius-md);
+      background: linear-gradient(135deg, var(--primary) 0%, var(--primary-light) 100%);
+      color: white;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.25rem;
+      box-shadow: 0 2px 8px rgba(27, 67, 50, 0.25);
+    }
+
+    .nav-tabs {
+      display: flex;
+      gap: 0.375rem;
+      background: #f1f5f9;
+      padding: 0.25rem;
+      border-radius: var(--radius-lg);
+    }
+
+    .nav-btn {
+      padding: 0.5rem 1rem;
+      border: none;
+      background: transparent;
+      color: var(--text-muted);
+      font-weight: 600;
+      font-size: 0.875rem;
+      border-radius: var(--radius-md);
+      cursor: pointer;
+      transition: all 0.2s ease;
+      display: flex;
+      align-items: center;
+      gap: 0.375rem;
+    }
+
+    .nav-btn:hover {
+      color: var(--text-main);
+      background: rgba(255, 255, 255, 0.6);
+    }
+
+    .nav-btn.active {
+      background: var(--surface);
+      color: var(--primary);
+      box-shadow: var(--shadow-sm);
+    }
+
+    .action-btn {
+      padding: 0.5rem 1rem;
+      border-radius: var(--radius-md);
+      font-weight: 600;
+      font-size: 0.875rem;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.375rem;
+      border: 1px solid transparent;
+      transition: all 0.2s;
+    }
+
+    .action-btn-primary {
+      background: var(--primary);
+      color: white;
+    }
+
+    .action-btn-primary:hover {
+      background: var(--primary-light);
+      transform: translateY(-1px);
+    }
+
+    .action-btn-outline {
+      border-color: var(--border-strong);
+      background: white;
+      color: var(--text-main);
+    }
+
+    .action-btn-outline:hover {
+      background: #f8fafc;
+      border-color: var(--text-soft);
+    }
+
+    /* Hero Header */
+    .hero {
+      background: linear-gradient(135deg, #0b291c 0%, #1b4332 60%, #2d6a4f 100%);
+      color: white;
+      padding: 3.5rem 1.5rem 3rem;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero::after {
+      content: '';
+      position: absolute;
+      top: -40%;
+      right: -10%;
+      width: 500px;
+      height: 500px;
+      background: radial-gradient(circle, rgba(217, 119, 6, 0.15) 0%, transparent 70%);
+      pointer-events: none;
+    }
+
+    .hero-content {
+      max-width: 1200px;
+      margin: 0 auto;
+      position: relative;
+      z-index: 2;
+    }
+
+    .hero-badge-group {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+      margin-bottom: 1.25rem;
+    }
+
+    .hero-badge {
+      font-size: 0.75rem;
+      font-weight: 700;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      padding: 0.35rem 0.75rem;
+      border-radius: 9999px;
+      background: rgba(255, 255, 255, 0.12);
+      backdrop-filter: blur(8px);
+      border: 1px solid rgba(255, 255, 255, 0.2);
+    }
+
+    .hero-badge.highlight {
+      background: var(--accent);
+      border-color: transparent;
+      color: #0f172a;
+    }
+
+    .hero h1 {
+      font-size: 2.35rem;
+      font-weight: 800;
+      line-height: 1.25;
+      margin-bottom: 1rem;
+      letter-spacing: -0.02em;
+    }
+
+    .hero p {
+      font-size: 1.075rem;
+      color: #e2e8f0;
+      max-width: 860px;
+      line-height: 1.7;
+    }
+
+    .hero-meta {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 1rem;
+      margin-top: 2rem;
+      padding-top: 1.5rem;
+      border-top: 1px solid rgba(255, 255, 255, 0.15);
+    }
+
+    .hero-meta-item {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .hero-meta-label {
+      font-size: 0.75rem;
+      color: #94a3b8;
+      font-weight: 500;
+      text-transform: uppercase;
+    }
+
+    .hero-meta-value {
+      font-size: 1rem;
+      font-weight: 700;
+      color: white;
+    }
+
+    /* Main Container */
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 2rem 1.5rem 4rem;
+    }
+
+    /* Sections */
+    .tab-content {
+      display: none;
+    }
+
+    .tab-content.active {
+      display: block;
+      animation: fadeIn 0.3s ease-out;
+    }
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+        transform: translateY(6px);
+      }
+
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    /* Cards */
+    .card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-lg);
+      padding: 1.75rem;
+      margin-bottom: 1.5rem;
+      box-shadow: var(--shadow-sm);
+      transition: border-color 0.2s, box-shadow 0.2s;
+    }
+
+    .card:hover {
+      border-color: var(--border-strong);
+      box-shadow: var(--shadow-md);
+    }
+
+    .card-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 1.25rem;
+      padding-bottom: 0.75rem;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .card-title {
+      font-size: 1.25rem;
+      font-weight: 700;
+      color: var(--text-main);
+      display: flex;
+      align-items: center;
+      gap: 0.625rem;
+    }
+
+    .card-title-icon {
+      width: 32px;
+      height: 32px;
+      border-radius: var(--radius-sm);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1rem;
+      background: #ecfdf5;
+      color: var(--primary);
+    }
+
+    .card-badge {
+      font-size: 0.75rem;
+      padding: 0.25rem 0.625rem;
+      border-radius: 9999px;
+      font-weight: 600;
+      background: #f1f5f9;
+      color: var(--text-muted);
+    }
+
+    /* Specific Elements */
+    .pill-tag {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.35rem;
+      padding: 0.25rem 0.625rem;
+      border-radius: var(--radius-sm);
+      font-size: 0.8125rem;
+      font-weight: 600;
+      margin-right: 0.5rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .pill-code {
+      font-family: 'Outfit', monospace;
+      font-weight: 700;
+      letter-spacing: 0.03em;
+    }
+
+    .pill-c1 {
+      background: #eff6ff;
+      color: #1d4ed8;
+      border: 1px solid #bfdbfe;
+    }
+
+    .pill-c3 {
+      background: #fdf2f8;
+      color: #be185d;
+      border: 1px solid #fbcfe8;
+    }
+
+    .pill-ab {
+      background: #f0fdf4;
+      color: #15803d;
+      border: 1px solid #bbf7d0;
+    }
+
+    .pill-dd {
+      background: #fffbeb;
+      color: #b45309;
+      border: 1px solid #fde68a;
+    }
+
+    .pill-exp {
+      background: #faf5ff;
+      color: #7e22ce;
+      border: 1px solid #e9d5ff;
+    }
+
+    .curriculum-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 1.25rem;
+    }
+
+    .standard-box {
+      border: 1px solid var(--border);
+      border-radius: var(--radius-md);
+      padding: 1.25rem;
+      background: #ffffff;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .standard-box h4 {
+      font-size: 0.95rem;
+      font-weight: 700;
+      margin-bottom: 0.75rem;
+      color: var(--text-main);
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    .standard-item {
+      margin-bottom: 0.75rem;
+      padding-bottom: 0.75rem;
+      border-bottom: 1px dashed var(--border);
+    }
+
+    .standard-item:last-child {
+      margin-bottom: 0;
+      padding-bottom: 0;
+      border-bottom: none;
+    }
+
+    .standard-desc {
+      font-size: 0.8875rem;
+      color: var(--text-muted);
+      line-height: 1.6;
+    }
+
+    /* Overall Goal Box */
+    .goal-hero-box {
+      background: linear-gradient(135deg, #f0fdf4 0%, #ecfdf5 100%);
+      border: 1px solid #a7f3d0;
+      border-radius: var(--radius-lg);
+      padding: 1.5rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .goal-hero-title {
+      font-weight: 800;
+      color: var(--primary-dark);
+      font-size: 1.1rem;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      margin-bottom: 0.75rem;
+    }
+
+    .goal-hero-text {
+      font-size: 0.95rem;
+      color: #064e3b;
+      line-height: 1.8;
+      font-weight: 500;
+    }
+
+    .goal-points {
+      margin-top: 1rem;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 0.75rem;
+    }
+
+    .goal-point-card {
+      background: white;
+      border-radius: var(--radius-md);
+      padding: 0.875rem 1rem;
+      border-left: 4px solid var(--primary-light);
+      box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04);
+    }
+
+    .goal-point-card strong {
+      display: block;
+      color: var(--primary);
+      font-size: 0.875rem;
+      margin-bottom: 0.25rem;
+    }
+
+    .goal-point-card p {
+      font-size: 0.85rem;
+      color: var(--text-muted);
+      margin: 0;
+    }
+
+    /* Lesson Timeline */
+    .lesson-meta-header {
+      background: #f8fafc;
+      border: 1px solid var(--border);
+      border-radius: var(--radius-md);
+      padding: 1rem 1.25rem;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      gap: 1rem;
+      align-items: center;
+      margin-bottom: 1.5rem;
+    }
+
+    .timeline-container {
+      position: relative;
+      padding-left: 2rem;
+    }
+
+    .timeline-container::before {
+      content: '';
+      position: absolute;
+      left: 7px;
+      top: 10px;
+      bottom: 10px;
+      width: 2px;
+      background: #cbd5e1;
+    }
+
+    .timeline-step {
+      position: relative;
+      margin-bottom: 2rem;
+    }
+
+    .timeline-step:last-child {
+      margin-bottom: 0;
+    }
+
+    .timeline-marker {
+      position: absolute;
+      left: -2rem;
+      top: 0.25rem;
+      width: 16px;
+      height: 16px;
+      border-radius: 50%;
+      background: var(--surface);
+      border: 3px solid var(--primary);
+      box-shadow: 0 0 0 3px #ecfdf5;
+    }
+
+    .timeline-marker.accent {
+      border-color: var(--accent);
+      box-shadow: 0 0 0 3px var(--accent-soft);
+    }
+
+    .timeline-marker.purple {
+      border-color: var(--scout-purple);
+      box-shadow: 0 0 0 3px var(--scout-purple-soft);
+    }
+
+    .timeline-step-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      margin-bottom: 0.5rem;
+    }
+
+    .timeline-step-title {
+      font-size: 1.1rem;
+      font-weight: 700;
+      color: var(--text-main);
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    .timeline-time-badge {
+      font-family: 'Outfit', sans-serif;
+      font-weight: 700;
+      font-size: 0.8125rem;
+      padding: 0.2rem 0.5rem;
+      border-radius: var(--radius-sm);
+      background: #f1f5f9;
+      color: var(--text-muted);
+    }
+
+    .timeline-body {
+      background: #f8fafc;
+      border: 1px solid var(--border);
+      border-radius: var(--radius-md);
+      padding: 1.25rem;
+    }
+
+    .pedagogy-subgrid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 1rem;
+      margin-top: 1rem;
+    }
+
+    .pedagogy-box {
+      background: white;
+      border-radius: var(--radius-sm);
+      padding: 0.875rem;
+      border: 1px solid var(--border);
+    }
+
+    .pedagogy-box-title {
+      font-size: 0.8rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      margin-bottom: 0.35rem;
+      display: flex;
+      align-items: center;
+      gap: 0.35rem;
+    }
+
+    .pedagogy-box p,
+    .pedagogy-box ul {
+      font-size: 0.85rem;
+      color: var(--text-muted);
+      line-height: 1.6;
+    }
+
+    .pedagogy-box ul {
+      padding-left: 1.2rem;
+    }
+
+    /* Scout Badges Showcase */
+    .badge-showcase {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 1rem;
+      margin: 1rem 0;
+    }
+
+    .badge-card {
+      background: white;
+      border: 1px solid var(--border);
+      border-radius: var(--radius-md);
+      padding: 1.25rem;
+      text-align: center;
+      box-shadow: var(--shadow-sm);
+      transition: transform 0.2s;
+    }
+
+    .badge-card:hover {
+      transform: translateY(-3px);
+      box-shadow: var(--shadow-md);
+    }
+
+    .badge-svg {
+      width: 72px;
+      height: 72px;
+      margin: 0 auto 0.75rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .badge-card h5 {
+      font-size: 1rem;
+      font-weight: 700;
+      color: var(--text-main);
+      margin-bottom: 0.35rem;
+    }
+
+    .badge-card .badge-country {
+      font-size: 0.75rem;
+      color: var(--accent);
+      font-weight: 700;
+      text-transform: uppercase;
+      margin-bottom: 0.5rem;
+    }
+
+    .badge-card p {
+      font-size: 0.8125rem;
+      color: var(--text-muted);
+      text-align: left;
+      line-height: 1.5;
+    }
+
+    /* Worksheet Styling (Screen & Print) */
+    .worksheet-paper {
+      background: white;
+      border: 1px solid var(--border-strong);
+      border-radius: var(--radius-lg);
+      padding: 2.5rem;
+      box-shadow: var(--shadow-lg);
+      position: relative;
+    }
+
+    .worksheet-header {
+      text-align: center;
+      border-bottom: 2px solid var(--text-main);
+      padding-bottom: 1.25rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .worksheet-title {
+      font-size: 1.75rem;
+      font-weight: 800;
+      color: var(--primary-dark);
+      letter-spacing: -0.01em;
+      margin-bottom: 0.25rem;
+    }
+
+    .worksheet-subtitle {
+      font-size: 0.95rem;
+      color: var(--text-muted);
+      font-weight: 500;
+    }
+
+    .student-info-bar {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 1rem;
+      background: #f8fafc;
+      border: 1px solid var(--border);
+      padding: 0.75rem 1rem;
+      border-radius: var(--radius-sm);
+      margin-bottom: 1.75rem;
+    }
+
+    .info-field {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      font-size: 0.875rem;
+      font-weight: 600;
+      color: var(--text-muted);
+    }
+
+    .info-input {
+      border: none;
+      border-bottom: 1px solid var(--border-strong);
+      background: transparent;
+      padding: 0.2rem 0.4rem;
+      font-size: 0.9rem;
+      font-weight: 700;
+      color: var(--text-main);
+      width: 100%;
+      outline: none;
+    }
+
+    .info-input:focus {
+      border-bottom-color: var(--primary);
+    }
+
+    .ws-section {
+      margin-bottom: 2rem;
+    }
+
+    .ws-section-title {
+      font-size: 1.15rem;
+      font-weight: 800;
+      color: var(--primary-dark);
+      background: #f1f5f9;
+      padding: 0.5rem 0.875rem;
+      border-left: 5px solid var(--primary);
+      border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+      margin-bottom: 1rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .ws-section-tag {
+      font-size: 0.75rem;
+      font-weight: 600;
+      padding: 0.2rem 0.5rem;
+      border-radius: 4px;
+      background: white;
+      color: var(--primary);
+      border: 1px solid var(--border);
+    }
+
+    .ws-question {
+      margin-bottom: 1.25rem;
+      font-size: 0.925rem;
+    }
+
+    .ws-question-label {
+      font-weight: 700;
+      margin-bottom: 0.5rem;
+      color: var(--text-main);
+      display: block;
+    }
+
+    .scenario-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 1rem;
+      margin-bottom: 1rem;
+    }
+
+    .scenario-card {
+      border: 1px solid var(--border);
+      border-radius: var(--radius-md);
+      padding: 1rem;
+      background: #fafafa;
+    }
+
+    .scenario-icon {
+      font-size: 1.75rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .scenario-title {
+      font-weight: 700;
+      font-size: 0.9rem;
+      color: var(--text-main);
+      margin-bottom: 0.35rem;
+    }
+
+    .scenario-desc {
+      font-size: 0.8125rem;
+      color: var(--text-muted);
+      line-height: 1.5;
+      margin-bottom: 0.75rem;
+    }
+
+    .ws-textarea {
+      width: 100%;
+      min-height: 70px;
+      padding: 0.625rem;
+      border: 1px solid var(--border-strong);
+      border-radius: var(--radius-sm);
+      font-family: inherit;
+      font-size: 0.875rem;
+      line-height: 1.5;
+      resize: vertical;
+      color: var(--text-main);
+      background: #fff;
+    }
+
+    .ws-textarea:focus {
+      outline: none;
+      border-color: var(--primary);
+      box-shadow: 0 0 0 3px rgba(27, 67, 50, 0.1);
+    }
+
+    .table-ws {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 1rem 0;
+      font-size: 0.875rem;
+    }
+
+    .table-ws th,
+    .table-ws td {
+      border: 1px solid var(--border-strong);
+      padding: 0.75rem;
+      text-align: left;
+      vertical-align: top;
+    }
+
+    .table-ws th {
+      background: #f8fafc;
+      font-weight: 700;
+      color: var(--text-main);
+    }
+
+    .table-input {
+      width: 100%;
+      border: none;
+      background: transparent;
+      padding: 0.35rem;
+      font-family: inherit;
+      font-size: 0.85rem;
+      resize: vertical;
+      outline: none;
+    }
+
+    .table-input:focus {
+      background: #f0fdf4;
+      border-radius: 4px;
+    }
+
+    /* Checkbox & Radio Styles */
+    .checkbox-list {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 0.5rem;
+      margin: 0.5rem 0;
+    }
+
+    .checkbox-item {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      font-size: 0.875rem;
+      color: var(--text-main);
+      cursor: pointer;
+    }
+
+    .checkbox-item input[type="checkbox"] {
+      width: 18px;
+      height: 18px;
+      accent-color: var(--primary);
+      cursor: pointer;
+    }
+
+    /* Rubric / Assessment Table */
+    .rubric-box {
+      background: #f8fafc;
+      border: 1px solid var(--border);
+      border-radius: var(--radius-md);
+      padding: 1.25rem;
+      margin-top: 1.5rem;
+    }
+
+    .rubric-title {
+      font-weight: 700;
+      font-size: 0.95rem;
+      color: var(--text-main);
+      margin-bottom: 0.75rem;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    /* Callouts */
+    .callout {
+      border-left: 4px solid var(--accent);
+      background: #fffbeb;
+      padding: 1rem 1.25rem;
+      border-radius: 0 var(--radius-md) var(--radius-md) 0;
+      margin: 1rem 0;
+      font-size: 0.8875rem;
+      color: #78350f;
+    }
+
+    .callout strong {
+      display: block;
+      margin-bottom: 0.25rem;
+      color: #92400e;
+    }
+
+    .callout-scout {
+      border-left-color: var(--scout-purple);
+      background: var(--scout-purple-soft);
+      color: #3b0764;
+    }
+
+    .callout-scout strong {
+      color: var(--scout-purple);
+    }
+
+    /* Print Preview Floating Bar */
+    .print-bar {
+      position: fixed;
+      bottom: 2rem;
+      right: 2rem;
+      background: white;
+      padding: 0.75rem 1.25rem;
+      border-radius: 9999px;
+      box-shadow: var(--shadow-xl);
+      border: 1px solid var(--border);
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      z-index: 99;
+    }
+
+    /* Responsive adjustments */
+    @media (max-width: 768px) {
+      .hero h1 {
+        font-size: 1.75rem;
+      }
+
+      .nav-inner {
+        flex-direction: column;
+        align-items: stretch;
+      }
+
+      .nav-tabs {
+        overflow-x: auto;
+        width: 100%;
+        justify-content: flex-start;
+      }
+
+      .worksheet-paper {
+        padding: 1.25rem;
+      }
+
+      .student-info-bar {
+        grid-template-columns: 1fr 1fr;
+      }
+
+      .print-bar {
+        bottom: 1rem;
+        right: 1rem;
+        left: 1rem;
+        justify-content: space-between;
+        border-radius: var(--radius-md);
+      }
+    }
+
+    /* Print Optimization: A4 Print Rules */
+    @media print {
+      @page {
+        size: A4 portrait;
+        margin: 12mm 15mm 12mm 15mm;
+      }
+
+      body {
+        background: white;
+        color: black;
+        font-size: 10.5pt;
+        line-height: 1.45;
+      }
+
+      .top-nav,
+      .hero,
+      .print-bar,
+      .nav-tabs,
+      .non-printable {
+        display: none !important;
+      }
+
+      .container {
+        max-width: 100%;
+        padding: 0;
+        margin: 0;
+      }
+
+      .tab-content {
+        display: block !important;
+      }
+
+      .card {
+        border: 1px solid #94a3b8;
+        box-shadow: none !important;
+        page-break-inside: avoid;
+        padding: 1rem;
+        margin-bottom: 1rem;
+      }
+
+      .worksheet-paper {
+        border: none;
+        box-shadow: none !important;
+        padding: 0;
+        page-break-after: always;
+      }
+
+      .ws-section {
+        page-break-inside: avoid;
+      }
+
+      .ws-textarea,
+      .table-input {
+        border: 1px dashed #64748b;
+        background: white !important;
+      }
+
+      .badge-card {
+        border: 1px solid #cbd5e1;
+        break-inside: avoid;
+      }
+
+      a {
+        text-decoration: none;
+        color: inherit;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- Top Sticky Navigation -->
+  <header class="top-nav non-printable">
+    <div class="nav-inner">
+      <a href="#" class="brand">
+        <div class="brand-icon">⚜️</div>
+        <span>國際童軍與多元文化課程</span>
+      </a>
+
+      <nav class="nav-tabs" role="tablist">
+        <button class="nav-btn active" onclick="switchTab('plan', this)" role="tab" id="tab-btn-plan">
+          📋 領綱教案架構
+        </button>
+        <button class="nav-btn" onclick="switchTab('lessons', this)" role="tab" id="tab-btn-lessons">
+          🧭 兩次課程詳細規劃
+        </button>
+        <button class="nav-btn" onclick="switchTab('worksheet', this)" role="tab" id="tab-btn-worksheet">
+          📝 學生學習單手冊
+        </button>
+        <button class="nav-btn" onclick="switchTab('badges', this)" role="tab" id="tab-btn-badges">
+          🌍 各國童軍徽圖鑑
+        </button>
+      </nav>
+
+      <div style="display: flex; gap: 0.5rem;">
+        <button class="action-btn action-btn-primary" onclick="window.print()">
+          🖨️ 列印 / 另存 PDF
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero Banner -->
+  <section class="hero non-printable">
+    <div class="hero-content">
+      <div class="hero-badge-group">
+        <span class="hero-badge highlight">十二年國民基本教育課程綱要</span>
+        <span class="hero-badge">綜合活動領域・童軍科</span>
+        <span class="hero-badge">國中第四學習階段 (8-9年級)</span>
+        <span class="hero-badge">跨領域協同：輔導科</span>
+      </div>
+      <h1>童軍心・世界情：探索國際童軍與多元文化生活能力</h1>
+      <p>
+        本教案緊扣領綱核心素養【綜-J-C1】與【綜-J-C3】，整合童軍科【童Ab-Ⅳ-1、童Ab-Ⅳ-2、童Ab-Ⅳ-3】與輔導科【輔Dd-Ⅳ-3】，引導學生透過情境辨識、世界各國童軍徽文化解碼、多元參與管道探索與小隊微型國際博覽會，厚植多元社會所需具備的自主應變、跨文化同理與世界公民責任感。
+      </p>
+
+      <div class="hero-meta">
+        <div class="hero-meta-item">
+          <span class="hero-meta-label">課程總時數</span>
+          <span class="hero-meta-value">2 節課 (共 90 分鐘 / 兩次規劃)</span>
+        </div>
+        <div class="hero-meta-item">
+          <span class="hero-meta-label">主要教學策略</span>
+          <span class="hero-meta-value">情境探究、鷹架圖像解構、合作學習拼圖法</span>
+        </div>
+        <div class="hero-meta-item">
+          <span class="hero-meta-label">評量工具</span>
+          <span class="hero-meta-value">探索學習單、同儕互評規準、反思檢核表</span>
+        </div>
+        <div class="hero-meta-item">
+          <span class="hero-meta-label">教材載具</span>
+          <span class="hero-meta-value">情境圖卡、各國童軍徽圖鑑、JOTA-JOTI世界地圖</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Main Content Area -->
+  <main class="container">
+
+    <!-- ========================================== -->
+    <!-- TAB 1: 領綱教案架構 (1~5項必填項目完整呈現) -->
+    <!-- ========================================== -->
+    <section id="tab-plan" class="tab-content active">
+
+      <!-- 1. 學習目標 (結合領域核心素養之整體性撰述與條列重點) -->
+      <div class="card">
+        <div class="card-header">
+          <div class="card-title">
+            <div class="card-title-icon">🎯</div>
+            <span>1. 學習目標 (Learning Objectives)</span>
+          </div>
+          <span class="card-badge">必填項目・依領綱格式撰述</span>
+        </div>
+
+        <div class="goal-hero-box">
+          <div class="goal-hero-title">
+            <span>🌟 課程目標整體性統整敘寫 (整體性意涵)</span>
+          </div>
+          <p class="goal-hero-text">
+            本課程旨在引導學生透過探索國內外童軍與青少年活動的理念及核心特色，深化對人、生活環境與多元社會互動的覺察；藉由生活情境圖片歸納童軍生活能力，並運用文化意象符號解構世界各國童軍徽的設計理念，培養對世界各地生活方式與多元文化的理解、尊重與同理包容；進而能主動蒐集國際童軍交流資訊（如世界童軍大露營、JOTA-JOTI
+            網路空中大會），評估自身條件規劃合宜的國際參與路徑，落實世界公民關懷並展現多元社會應具備之適應與生活實踐能力。
+          </p>
+
+          <div class="goal-points">
+            <div class="goal-point-card">
+              <strong>目標 1：理念特色與多元生活能力覺察</strong>
+              <p>理解童軍和青少年活動的理念及特色，覺察不同文化面向，增進多元社會中的生活能力。</p>
+            </div>
+            <div class="goal-point-card">
+              <strong>目標 2：國際資訊蒐集與跨文化尊重參與</strong>
+              <p>蒐集與分享國際童軍資訊及交流活動並能適當參與，展現對國際文化的理解與尊重。</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 2 & 4 & 3: 核心素養、學習表現、學習內容 對照表 -->
+      <div class="curriculum-grid">
+
+        <!-- 2. 核心素養 -->
+        <div class="card">
+          <div class="card-header">
+            <div class="card-title">
+              <div class="card-title-icon">🧭</div>
+              <span>2. 核心素養 (Core Competencies)</span>
+            </div>
+            <span class="card-badge">領域核心素養具體內涵</span>
+          </div>
+
+          <div class="standard-box">
+            <div class="standard-item">
+              <span class="pill-tag pill-c1"><span class="pill-code">綜-J-C1</span> 自主關懷與行動</span>
+              <p class="standard-desc">
+                探索人與環境的關係，規劃、執行服務學習和戶外學習活動，落實公民關懷並反思環境永續的行動價值。
+              </p>
+            </div>
+            <div class="standard-item">
+              <span class="pill-tag pill-c3"><span class="pill-code">綜-J-C3</span> 多元文化與國際理解</span>
+              <p class="standard-desc">
+                探索世界各地的生活方式，理解、尊重及關懷不同文化及族群，展現多元社會中應具備的生活能力。
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- 4. 學習表現 -->
+        <div class="card">
+          <div class="card-header">
+            <div class="card-title">
+              <div class="card-title-icon">💡</div>
+              <span>4. 學習表現 (Learning Performance)</span>
+            </div>
+            <span class="card-badge">呼應學習內容與目標</span>
+          </div>
+
+          <div class="standard-box">
+            <div class="standard-item">
+              <span class="pill-tag pill-exp"><span class="pill-code">3c-Ⅳ-1</span> 跨文化理解與尊重</span>
+              <p class="standard-desc">
+                探索世界各地的生活方式，展現自己對國際文化的理解與尊重。
+              </p>
+            </div>
+            <div class="standard-item">
+              <span class="pill-tag pill-exp"><span class="pill-code">3c-Ⅳ-2</span> 多元社會生活能力</span>
+              <p class="standard-desc">
+                展現多元社會生活中所應具備的能力。
+              </p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- 3. 學習內容 -->
+      <div class="card">
+        <div class="card-header">
+          <div class="card-title">
+            <div class="card-title-icon">📚</div>
+            <span>3. 學習內容 (Learning Content)</span>
+          </div>
+          <span class="card-badge">跨領域統整條目</span>
+        </div>
+
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 1rem;">
+          <div class="standard-box" style="border-left: 4px solid #16a34a;">
+            <h4><span class="pill-tag pill-ab"><span class="pill-code">童Ab-Ⅳ-1</span></span> 國內青少年活動與生活能力</h4>
+            <p class="standard-desc">國內童軍與青少年活動的認識及參與，以增進生活能力。</p>
+          </div>
+
+          <div class="standard-box" style="border-left: 4px solid #2563eb;">
+            <h4><span class="pill-tag pill-ab"><span class="pill-code">童Ab-Ⅳ-2</span></span> 世界童軍資訊與國際觀</h4>
+            <p class="standard-desc">世界童軍活動資訊的蒐集與分享，以培養國際觀與全球關懷。</p>
+          </div>
+
+          <div class="standard-box" style="border-left: 4px solid #9333ea;">
+            <h4><span class="pill-tag pill-ab"><span class="pill-code">童Ab-Ⅳ-3</span></span> 國際交流認識與適切參與</h4>
+            <p class="standard-desc">童軍國際交流活動的認識與理解，並能選擇適合的參與方式。</p>
+          </div>
+
+          <div class="standard-box" style="border-left: 4px solid #d97706;">
+            <h4><span class="pill-tag pill-dd"><span class="pill-code">輔Dd-Ⅳ-3</span></span> 跨領域連結：多元文化互動</h4>
+            <p class="standard-desc">多元文化社會的互動與關懷（連結輔導科多元族群同理與包容）。</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- 5. 學習內容實施方式架構 (四項重點對應與策略) -->
+      <div class="card">
+        <div class="card-header">
+          <div class="card-title">
+            <div class="card-title-icon">🛠️</div>
+            <span>5. 學習內容實施方式 (Implementation Methods & Scaffolding)</span>
+          </div>
+          <span class="card-badge">從學生學習觀點敘寫</span>
+        </div>
+
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 1rem;">
+
+          <div class="standard-box">
+            <h4><span style="color: var(--primary);">①</span> 國際童軍活動與適切參與方式</h4>
+            <p class="standard-desc" style="margin-bottom: 0.5rem;">
+              <strong>【學生學習行為】：</strong>能辨識並說出國際性童軍活動的種類（大露營、JOTA-JOTI、青年論壇、和平使者計畫 MOP），能檢視個人年齡、語言、興趣等條件，選擇合適的參與途徑。
+            </p>
+            <div
+              style="background: #f1f5f9; padding: 0.6rem; border-radius: 4px; font-size: 0.8rem; color: var(--text-muted);">
+              💡 <strong>學習鷹架：</strong>參與途徑決策樹（實體大會 vs 虛擬空中大會 vs 在地國際日）、評估表單。
+            </div>
+          </div>
+
+          <div class="standard-box">
+            <h4><span style="color: var(--primary);">②</span> 圖片情境歸納童軍生活能力</h4>
+            <p class="standard-desc" style="margin-bottom: 0.5rem;">
+              <strong>【學生學習行為】：</strong>觀察多元情境照片（營地建設、急救包紮、社區服務、跨國文化野炊），歸納分析參加童軍所培育的自主、團隊、環境永續與社會應變能力。
+            </p>
+            <div
+              style="background: #f1f5f9; padding: 0.6rem; border-radius: 4px; font-size: 0.8rem; color: var(--text-muted);">
+              💡 <strong>學習鷹架：</strong>情境分析 4C 雷達引導（溝通 Communication、合作 Collaboration、批判思考 Critical Thinking、文化同理
+              Cultural Empathy）。
+            </div>
+          </div>
+
+          <div class="standard-box">
+            <h4><span style="color: var(--primary);">③</span> 各國童軍徽辨識與文化寓意解碼</h4>
+            <p class="standard-desc" style="margin-bottom: 0.5rem;">
+              <strong>【學生學習行為】：</strong>解構世界童軍徽（WOSM 百合花飾、三葉、白繩和平結、指引之星），並能對照不同國家（如臺灣、日本、英國、美國、紐西蘭）童軍徽中的在地文化圖騰與設計理念。
+            </p>
+            <div
+              style="background: #f1f5f9; padding: 0.6rem; border-radius: 4px; font-size: 0.8rem; color: var(--text-muted);">
+              💡 <strong>學習鷹架：</strong>符號對照解碼卡、世界童軍徽解構圖層卡。
+            </div>
+          </div>
+
+          <div class="standard-box">
+            <h4><span style="color: var(--primary);">④</span> 世界接軌與小隊多元文化分享</h4>
+            <p class="standard-desc" style="margin-bottom: 0.5rem;">
+              <strong>【學生學習行為】：</strong>透過童軍小隊制度（Patrol System），進行任務分工、資料蒐集與彙整，在「微型世界大露營博覽會」中進行口頭小隊報告，展現對各國文化的尊重與同理。
+            </p>
+            <div
+              style="background: #f1f5f9; padding: 0.6rem; border-radius: 4px; font-size: 0.8rem; color: var(--text-muted);">
+              💡 <strong>學習鷹架：</strong>小隊報告簡報鷹架單、同儕互評友誼布章獎勵機制。
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+    </section>
+
+    <!-- ========================================== -->
+    <!-- TAB 2: 兩次課程詳細規劃 (45分鐘 x 2節課) -->
+    <!-- ========================================== -->
+    <section id="tab-lessons" class="tab-content">
+
+      <!-- 兩次課程概覽 -->
+      <div class="lesson-meta-header">
+        <div>
+          <span style="font-weight: 800; font-size: 1.1rem; color: var(--primary-dark);">兩次課程進度與主軸規劃</span>
+          <p style="font-size: 0.875rem; color: var(--text-muted); margin: 0;">
+            符合十二年國教「探究與實作」精神，第一節側重內涵覺察與解碼，第二節側重實踐探究與文化分享。</p>
+        </div>
+        <div style="display: flex; gap: 0.5rem;">
+          <span class="pill-tag pill-c1">第 1 次：能力密碼與徽章解碼 (45')</span>
+          <span class="pill-tag pill-c3">第 2 次：文化博覽與國際參與 (45')</span>
+        </div>
+      </div>
+
+      <!-- 第一次課程：第 1 節課 -->
+      <div class="card">
+        <div class="card-header">
+          <div class="card-title">
+            <div class="card-title-icon" style="background: #eff6ff; color: #1d4ed8;">1️⃣</div>
+            <span>第一次課程規劃：童軍能力密碼與各國童軍徽文化解碼</span>
+          </div>
+          <span class="card-badge" style="background: #dbeafe; color: #1e40af;">第 1 節課 / 共 45 分鐘</span>
+        </div>
+
+        <div
+          style="margin-bottom: 1.25rem; font-size: 0.9rem; color: var(--text-muted); background: #f8fafc; padding: 0.75rem 1rem; border-radius: var(--radius-sm); border: 1px solid var(--border);">
+          📌 <strong>本節學習目標：</strong> 1. 能透過生活情境圖片歸納參加童軍活動所增進的 4 項關鍵生活能力； 2. 能說出世界童軍百合花飾及至少三個國家童軍徽之文化圖騰與設計內涵（呼應
+          童Ab-Ⅳ-1、童Ab-Ⅳ-2、3c-Ⅳ-2）。
+        </div>
+
+        <div class="timeline-container">
+
+          <!-- 引起動機 (7 mins) -->
+          <div class="timeline-step">
+            <div class="timeline-marker"></div>
+            <div class="timeline-step-header">
+              <h4 class="timeline-step-title">一、引起動機：童軍不只是露營？情境圖片能力大解密</h4>
+              <span class="timeline-time-badge">7 分鐘</span>
+            </div>
+            <div class="timeline-body">
+              <p><strong>【學習活動】：</strong>教師展示 4 組對比情境照片（A. 國際大露營營地建設與無痕山林、B. 災難應變野外急救與包紮擔架製作、C. 社區老人照護與環境維護志工服務、D.
+                與各國童軍以三指禮左手握手合照）。</p>
+
+              <div class="pedagogy-subgrid">
+                <div class="pedagogy-box">
+                  <div class="pedagogy-box-title" style="color: var(--primary);">🙋 教師提問引導 (鷹架)</div>
+                  <ul>
+                    <li>「從照片中，你看到童軍在做什麼？這需要哪些生活技能？」</li>
+                    <li>「如果突然遇到地震或停電，童軍所學的能力可以如何幫助家人與社區？」</li>
+                  </ul>
+                </div>
+                <div class="pedagogy-box">
+                  <div class="pedagogy-box-title" style="color: var(--accent);">📝 學生任務與鷹架</div>
+                  <p>小隊共同討論，於學習單 Part 1 勾選並歸納 4 大核心生活能力（生活自主自理、團隊互助協作、環境永續關懷、多元應變解決問題）。</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- 發展活動一 (20 mins) -->
+          <div class="timeline-step">
+            <div class="timeline-marker accent"></div>
+            <div class="timeline-step-header">
+              <h4 class="timeline-step-title">二、發展活動一：世界童軍密碼——各國童軍徽的文化寓意解碼</h4>
+              <span class="timeline-time-badge">20 分鐘</span>
+            </div>
+            <div class="timeline-body">
+              <p><strong>【學習活動】：</strong>深入認識世界童軍運動組織（WOSM）標誌，並引導探究不同國家童軍徽如何將「全球核心價值」與「在地文化圖騰」巧妙揉合。</p>
+
+              <div class="callout callout-scout">
+                <strong>⚜️ 世界童軍徽（WOSM）核心解構：</strong>
+                三葉百合花（象徵對神/國家盡責、對他人服務、遵守童軍規律）；兩顆五角星（十個角象徵童軍十條諾言規律，亦如指引航海的明燈）；周圍繩圈與下方的平結（象徵世界童軍大家庭的團結友愛與和平）。
+              </div>
+
+              <div class="pedagogy-subgrid">
+                <div class="pedagogy-box">
+                  <div class="pedagogy-box-title" style="color: var(--scout-purple);">🌍 各國童軍徽探究小組拼圖法</div>
+                  <p>發下「各國童軍徽圖鑑卡」（臺灣、日本、英國、美國、紐西蘭等）：</p>
+                  <ul>
+                    <li><strong>臺灣：</strong>青天白日、梅花（堅忍）、智仁勇三達德。</li>
+                    <li><strong>日本：</strong>三瓣百合上疊加日本國花櫻花與神道精神紋飾。</li>
+                    <li><strong>英國：</strong>歷史悠久的皇室百合紋章與聖喬治十字勳章意涵。</li>
+                    <li><strong>美國：</strong>白頭海鵰、星條旗盾牌，象徵自由、忠誠與勇氣。</li>
+                  </ul>
+                </div>
+                <div class="pedagogy-box">
+                  <div class="pedagogy-box-title" style="color: var(--primary);">🎯 學習鷹架工具</div>
+                  <p>學生在學習單 Part 2 完成「文化符號對應表」：指出百合花飾與各國代表性圖騰的交融，體會多元文化的包容與自豪。</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- 發展活動二 (13 mins) -->
+          <div class="timeline-step">
+            <div class="timeline-marker"></div>
+            <div class="timeline-step-header">
+              <h4 class="timeline-step-title">三、發展活動二：與世界接軌的任意門——國際童軍活動種類</h4>
+              <span class="timeline-time-badge">13 分鐘</span>
+            </div>
+            <div class="timeline-body">
+              <p><strong>【學習活動】：</strong>教師透過影片與地圖介紹「不用出國也能與世界童軍連線」的多元交流形式：</p>
+              <ul style="padding-left: 1.25rem; font-size: 0.8875rem; color: var(--text-muted); line-height: 1.8;">
+                <li><strong>世界童軍大露營 (World Scout Jamboree)：</strong>每四年一次，數萬名來自世界各地的童軍齊聚一堂。</li>
+                <li><strong>空中大會 (JOTA) 與 網路大會 (JOTI)：</strong>每年十月第三個週末，透過無線電及網路無國界連線交流，零門檻認識全球夥伴。</li>
+                <li><strong>國際和平使者計畫 (Messengers of Peace, MOP)：</strong>在自己的社區發起友善環境或弱勢關懷行動，登錄至世界和平地圖。</li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- 綜合活動與總結 (5 mins) -->
+          <div class="timeline-step">
+            <div class="timeline-marker purple"></div>
+            <div class="timeline-step-header">
+              <h4 class="timeline-step-title">四、綜合活動：小結省思與第二節小隊探究任務抽籤</h4>
+              <span class="timeline-time-badge">5 分鐘</span>
+            </div>
+            <div class="timeline-body">
+              <p>1. 重點回顧：童軍活動的核心在於生活能力的培養與世界和平友愛的推動。<br>
+                2. 發布第二節課任務：各小隊抽籤選定一個代表國家（日、韓、英、美、芬蘭、泰國），課後蒐集該國童軍特點與青少年文化，準備進行下一節的「微型國際大露營博覽會」。</p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- 第二次課程：第 2 節課 -->
+      <div class="card">
+        <div class="card-header">
+          <div class="card-title">
+            <div class="card-title-icon" style="background: #fdf2f8; color: #be185d;">2️⃣</div>
+            <span>第二次課程規劃：微型世界大露營博覽與我的國際參與路徑圖</span>
+          </div>
+          <span class="card-badge" style="background: #fce7f3; color: #9d174d;">第 2 節課 / 共 45 分鐘</span>
+        </div>
+
+        <div
+          style="margin-bottom: 1.25rem; font-size: 0.9rem; color: var(--text-muted); background: #f8fafc; padding: 0.75rem 1rem; border-radius: var(--radius-sm); border: 1px solid var(--border);">
+          📌 <strong>本節學習目標：</strong> 1. 能透過小隊合作分享各國童軍與青少年文化特色，展現跨文化同理與多元社會互動能力； 2. 能依自身條件規劃具體可行的國際童軍或多元文化參與方案（呼應
+          童Ab-Ⅳ-3、輔Dd-Ⅳ-3、3c-Ⅳ-1、3c-Ⅳ-2）。
+        </div>
+
+        <div class="timeline-container">
+
+          <!-- 引起動機 (5 mins) -->
+          <div class="timeline-step">
+            <div class="timeline-marker"></div>
+            <div class="timeline-step-header">
+              <h4 class="timeline-step-title">一、引起動機：童軍三指禮與左手握手的世界秘密</h4>
+              <span class="timeline-time-badge">5 分鐘</span>
+            </div>
+            <div class="timeline-body">
+              <p>
+                <strong>【文化典故引導】：</strong>童軍創始人貝登堡（B-P）在非洲阿散蒂族人部落學習到的傳統——戰士放下左手的盾牌伸出左手握手，代表「我相信你，我們之間沒有武器防備」。讓學生同儕互相練習三指禮與左手握手，營造跨文化信任與友善氛圍。
+              </p>
+            </div>
+          </div>
+
+          <!-- 發展活動一 (22 mins) -->
+          <div class="timeline-step">
+            <div class="timeline-marker accent"></div>
+            <div class="timeline-step-header">
+              <h4 class="timeline-step-title">二、發展活動一：小隊報告——微型世界大露營文化博覽會</h4>
+              <span class="timeline-time-badge">22 分鐘</span>
+            </div>
+            <div class="timeline-body">
+              <p><strong>【學習活動】：</strong>各小隊依抽籤國家進行微型博覽會展示（每隊 3 分鐘精準分享），台下小隊擔任「國際觀察員」並進行互評。</p>
+
+              <div class="pedagogy-subgrid">
+                <div class="pedagogy-box">
+                  <div class="pedagogy-box-title" style="color: var(--primary);">🎤 小隊發表鷹架架構（3分鐘口訣）</div>
+                  <ol style="font-size: 0.85rem; padding-left: 1.2rem; color: var(--text-muted);">
+                    <li><strong>國名與童軍徽特色：</strong>其圖案代表該國什麼自然地理或歷史文化？</li>
+                    <li><strong>代表性童軍活動與生活方式：</strong>例如芬蘭的森林極地求生、日本的防災訓練、泰國的水上服務。</li>
+                    <li><strong>文化互動錦囊：</strong>與該國青少年互動時，有哪些禮儀或應尊重的文化禁忌？（連結輔導科多元文化互動）</li>
+                  </ol>
+                </div>
+                <div class="pedagogy-box">
+                  <div class="pedagogy-box-title" style="color: var(--accent);">🏅 互評與鷹架工具</div>
+                  <p>發給每位學生「童軍國際友誼章貼紙」，填寫學習單 Part 3 之「多元文化觀察互評紀錄」，寫下欣賞各小隊的優點與新發現。</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- 發展活動二 (10 mins) -->
+          <div class="timeline-step">
+            <div class="timeline-marker"></div>
+            <div class="timeline-step-header">
+              <h4 class="timeline-step-title">三、發展活動二：畫出「我的國際童軍參與路徑圖」</h4>
+              <span class="timeline-time-badge">10 分鐘</span>
+            </div>
+            <div class="timeline-body">
+              <p><strong>【自主規劃與反思】：</strong>引導學生結合生活現狀（國中階段、個人語言能力、興趣專長），制定屬於自己的「世界公民三階段參與計畫」。</p>
+
+              <div class="pedagogy-subgrid">
+                <div class="pedagogy-box">
+                  <div class="pedagogy-box-title" style="color: #2563eb;">🌱 階段一：立足在地 (國中階段)</div>
+                  <p>參加學校童軍團活動、參加線上 JOTI 網路大會與全球童軍聊天、在社區落實減塑與志工服務。</p>
+                </div>
+                <div class="pedagogy-box">
+                  <div class="pedagogy-box-title" style="color: #16a34a;">🌿 階段二：跨步交流 (高中/行義階段)</div>
+                  <p>精進第二外語、申請參加亞太區或世界童軍大露營代表團、投入和平使者 MOP 社區專案。</p>
+                </div>
+                <div class="pedagogy-box">
+                  <div class="pedagogy-box-title" style="color: #9333ea;">🌳 階段三：世界實踐 (大學/羅浮階段)</div>
+                  <p>擔任世界童軍活動國際志工 (IST)、參與跨國青年高峰論壇，展現多元社會實踐力。</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- 綜合活動與總結 (8 mins) -->
+          <div class="timeline-step">
+            <div class="timeline-marker purple"></div>
+            <div class="timeline-step-header">
+              <h4 class="timeline-step-title">四、綜合活動：回饋總結、自我評量與學習單收整</h4>
+              <span class="timeline-time-badge">8 分鐘</span>
+            </div>
+            <div class="timeline-body">
+              <p>1. <strong>教師總結深化：</strong>「世界就在我們眼前，童軍不只是戶外技能，更是尊重生命、包容多元文化的生活態度。」<br>
+                2. <strong>學生自評：</strong>完成學習單結尾的「領域核心素養自我檢核表」，反思自己在生活中能落實的具體行動。</p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+    </section>
+
+    <!-- ========================================== -->
+    <!-- TAB 3: 學生學習單 (可列印 A4 版面、可線上輸入) -->
+    <!-- ========================================== -->
+    <section id="tab-worksheet" class="tab-content">
+
+      <div class="worksheet-paper">
+
+        <div class="worksheet-header">
+          <div
+            style="font-size: 0.85rem; font-weight: 700; color: var(--accent); letter-spacing: 0.05em; text-transform: uppercase;">
+            十二年國民基本教育 綜合活動領域 童軍科學習單
+          </div>
+          <h2 class="worksheet-title">【童軍世界領航員】多元文化與國際參與探索手冊</h2>
+          <div class="worksheet-subtitle">
+            探索世界各地的生活方式，展現多元社會中應具備的生活能力與跨文化尊重
+          </div>
+        </div>
+
+        <!-- 學生基本資料 -->
+        <div class="student-info-bar">
+          <div class="info-field">
+            <span>年級班級：</span>
+            <input type="text" class="info-input" placeholder="_____年_____班">
+          </div>
+          <div class="info-field">
+            <span>所屬小隊：</span>
+            <input type="text" class="info-input" placeholder="第_____小隊 (隊名:_____)">
+          </div>
+          <div class="info-field">
+            <span>座號：</span>
+            <input type="text" class="info-input" placeholder="_____號">
+          </div>
+          <div class="info-field">
+            <span>姓名：</span>
+            <input type="text" class="info-input" placeholder="請填寫姓名">
+          </div>
+        </div>
+
+        <!-- PART 1: 圖片情境與童軍生活能力分析 -->
+        <div class="ws-section">
+          <div class="ws-section-title">
+            <span>Part 1：圖片情境分析——參加童軍能獲得的生活能力</span>
+            <span class="ws-section-tag">童Ab-Ⅳ-1 / 3c-Ⅳ-2</span>
+          </div>
+
+          <p class="ws-question">
+            觀察課堂展示的童軍活動圖片情境（如野外炊事搭帳、急救三角巾包紮、社區獨居長者關懷、國際夥伴三指禮交流），回答下列問題：
+          </p>
+
+          <div class="scenario-grid">
+            <div class="scenario-card">
+              <div class="scenario-icon">⛺</div>
+              <div class="scenario-title">情境 A：無痕營地建設與炊事</div>
+              <p class="scenario-desc">在無瓦斯無廚房的野外環境中，小隊協同搭建帳篷並運用生火技術準備餐點，收拾時落實垃圾減量與無痕山林（LNT）。</p>
+            </div>
+            <div class="scenario-card">
+              <div class="scenario-icon">🩹</div>
+              <div class="scenario-title">情境 B：急救與突發狀況應變</div>
+              <p class="scenario-desc">面對同伴擦傷扭傷或突發災害，童軍能熟練運用雙手及身邊物品進行包紮、固定與簡易擔架製作，沉著冷靜守護同伴安全。</p>
+            </div>
+            <div class="scenario-card">
+              <div class="scenario-icon">🤝</div>
+              <div class="scenario-title">情境 C：跨國青年交流與大露營</div>
+              <p class="scenario-desc">來自世界 150 多國的青少年即使語言不通，仍能透過手勢、微笑、交換布章與左手握手，共同完成營隊任務與文化之夜。</p>
+            </div>
+          </div>
+
+          <div class="ws-question">
+            <label class="ws-question-label">1. 請勾選並歸納：你認為參加童軍能培養多元社會中的哪些生活關鍵能力？（可複選）</label>
+            <div class="checkbox-list">
+              <label class="checkbox-item"><input type="checkbox" checked> 獨立自主與生活自理能力</label>
+              <label class="checkbox-item"><input type="checkbox" checked> 小隊溝通與團隊協作能力</label>
+              <label class="checkbox-item"><input type="checkbox" checked> 面對困境之應變與問題解決力</label>
+              <label class="checkbox-item"><input type="checkbox" checked> 環境永續與尊重自然之態度</label>
+              <label class="checkbox-item"><input type="checkbox" checked> 跨文化包容、同理與國際社交力</label>
+              <label class="checkbox-item"><input type="checkbox" checked> 主動關懷他人與社會公民責任</label>
+            </div>
+          </div>
+
+          <div class="ws-question">
+            <label class="ws-question-label">2. 【生活連結思考】：如果未來你進入多元文化的校園或國際職場，童軍的哪一項能力對你的幫助最大？為什麼？</label>
+            <textarea class="ws-textarea" placeholder="例如：我認為「跨文化同理與小隊合作」最有幫助，因為..."></textarea>
+          </div>
+        </div>
+
+        <!-- PART 2: 世界童軍徽文化解碼 -->
+        <div class="ws-section">
+          <div class="ws-section-title">
+            <span>Part 2：世界童軍徽文化密碼解讀</span>
+            <span class="ws-section-tag">童Ab-Ⅳ-2 / 3c-Ⅳ-1</span>
+          </div>
+
+          <p class="ws-question">
+            請根據課堂圖鑑探究，填寫世界童軍徽（WOSM）以及不同國家童軍徽如何融入其在地的文化象徵：
+          </p>
+
+          <table class="table-ws">
+            <thead>
+              <tr>
+                <th style="width: 25%;">童軍徽名稱</th>
+                <th style="width: 35%;">徽章中的文化元素與象徵圖騰</th>
+                <th style="width: 40%;">設計理念與文化涵義說明</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>世界童軍徽 (WOSM)</strong><br><span
+                    style="font-size: 0.75rem; color: var(--scout-purple);">全球統一標誌</span></td>
+                <td>三葉百合花、兩顆五角星、圍繞四周的白繩與下方的平結。</td>
+                <td>
+                  <textarea class="table-input" rows="2" placeholder="請寫出三葉百合象徵的三項諾言，以及白繩平結代表的意義..."></textarea>
+                </td>
+              </tr>
+              <tr>
+                <td><strong>中華民國童軍徽 (臺灣)</strong></td>
+                <td>青天白日徽、梅花造型百合花瓣、智仁勇三達德綵帶。</td>
+                <td>
+                  <textarea class="table-input" rows="2" placeholder="梅花象徵堅忍不拔精神；智仁勇為童軍的核心品格準則..."></textarea>
+                </td>
+              </tr>
+              <tr>
+                <td><strong>小隊探究國家：<br><input type="text" placeholder="填寫國家名稱"
+                      style="border:none; border-bottom:1px solid #94a3b8; width:90%; font-weight:700;"></strong></td>
+                <td><textarea class="table-input" rows="2" placeholder="寫出該國童軍徽中的特殊動植物、國旗顏色或傳統圖騰..."></textarea></td>
+                <td><textarea class="table-input" rows="2" placeholder="該國的設計理念反映出什麼樣的自然環境或民族文化特質？..."></textarea></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <!-- PART 3: 微型世界博覽會與小隊互評 -->
+        <div class="ws-section">
+          <div class="ws-section-title">
+            <span>Part 3：微型世界大露營博覽會——多元文化探索與同儕互評</span>
+            <span class="ws-section-tag">童Ab-Ⅳ-2 / 輔Dd-Ⅳ-3 / 3c-Ⅳ-1</span>
+          </div>
+
+          <p class="ws-question">
+            聆聽其他小隊的各國文化分享時，請記錄最令你印象深刻的 2 個國家，並給予正向回饋：
+          </p>
+
+          <table class="table-ws">
+            <thead>
+              <tr>
+                <th style="width: 20%;">報告小隊 / 國家</th>
+                <th style="width: 45%;">最特別的文化特色或童軍活動生活方式</th>
+                <th style="width: 35%;">文化互動錦囊（如何尊重其文化禮儀）</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><input type="text" class="table-input" placeholder="例如：第 2 小隊 / 日本"></td>
+                <td><textarea class="table-input" rows="2" placeholder="介紹了日本童軍的防災避難訓練與森林修養..."></textarea></td>
+                <td><textarea class="table-input" rows="2" placeholder="例如：進出露營木屋脫鞋、注重安靜與分類回收..."></textarea></td>
+              </tr>
+              <tr>
+                <td><input type="text" class="table-input" placeholder="例如：第 4 小隊 / 芬蘭"></td>
+                <td><textarea class="table-input" rows="2" placeholder="介紹了芬蘭童軍的極地雪地生火與桑拿文化..."></textarea></td>
+                <td><textarea class="table-input" rows="2" placeholder="例如：尊重個人安靜空間、極致珍惜林木資源..."></textarea></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <!-- PART 4: 適切參與國際童軍活動方式選擇 -->
+        <div class="ws-section">
+          <div class="ws-section-title">
+            <span>Part 4：我的國際童軍交流參與計畫</span>
+            <span class="ws-section-tag">童Ab-Ⅳ-3 / 綜-J-C1 / 綜-J-C3</span>
+          </div>
+
+          <div class="ws-question">
+            <label class="ws-question-label">1. 【認識國際活動】：請將下列國際童軍活動與其特色連線/勾選：</label>
+            <div
+              style="background: #f8fafc; padding: 1rem; border-radius: var(--radius-sm); border: 1px solid var(--border); font-size: 0.85rem; line-height: 1.8;">
+              <div>🔹 <strong>世界童軍大露營 (Jamboree)：</strong>每四年一次全球實體露營盛會，需年滿 14-17 歲報名參加代表團。</div>
+              <div>🔹 <strong>空中與網路世界大會 (JOTA-JOTI)：</strong>每年十月透過短波電波與網路聊天室，零旅費與全球童軍即時連線。</div>
+              <div>🔹 <strong>和平使者計畫 (Messengers of Peace)：</strong>結合在地志願服務（減塑、扶弱、環保），登錄全球服務時數。</div>
+            </div>
+          </div>
+
+          <div class="ws-question" style="margin-top: 1rem;">
+            <label class="ws-question-label">2. 【適切性選擇】：評估你目前的年齡、語言、興趣與資源，你認為「目前國中階段」最適合你參與的國際童軍活動是什麼？你打算如何準備？</label>
+            <textarea class="ws-textarea" rows="3" placeholder="我選擇參與的活動是：________
+原因是：________
+我打算採取的準備行動（如練習基本英文自我介紹、學習童軍國際布章交換禮儀等）：________"></textarea>
+          </div>
+        </div>
+
+        <!-- 領域核心素養自我檢核規準 -->
+        <div class="rubric-box">
+          <div class="rubric-title">
+            <span>📊 學習表現自我檢核表 (Self-Assessment Rubric)</span>
+          </div>
+          <table class="table-ws" style="margin: 0; background: white;">
+            <thead>
+              <tr>
+                <th style="width: 30%;">核心指標</th>
+                <th style="width: 50%;">評量規準具體表現</th>
+                <th style="width: 20%; text-align: center;">自我評定</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>3c-Ⅳ-1 跨文化理解與尊重</strong></td>
+                <td>能透過童軍徽圖騰與生活方式，理解並尊重不同國家文化的背景與特色，無歧視偏見。</td>
+                <td style="text-align: center;">
+                  <label><input type="radio" name="r1"> 優</label>&nbsp;
+                  <label><input type="radio" name="r1" checked> 良好</label>&nbsp;
+                  <label><input type="radio" name="r1"> 待加強</label>
+                </td>
+              </tr>
+              <tr>
+                <td><strong>3c-Ⅳ-2 多元社會生活能力</strong></td>
+                <td>能從情境中歸納童軍自主、合作與應變能力，並在小隊討論中積極協作與分享。</td>
+                <td style="text-align: center;">
+                  <label><input type="radio" name="r2" checked> 優</label>&nbsp;
+                  <label><input type="radio" name="r2"> 良好</label>&nbsp;
+                  <label><input type="radio" name="r2"> 待加強</label>
+                </td>
+              </tr>
+              <tr>
+                <td><strong>童Ab-Ⅳ-3 適切參與國際活動</strong></td>
+                <td>能具體說出至少一項自己可行的國際參與途徑，並擬定具體落實之準備行動。</td>
+                <td style="text-align: center;">
+                  <label><input type="radio" name="r3" checked> 優</label>&nbsp;
+                  <label><input type="radio" name="r3"> 良好</label>&nbsp;
+                  <label><input type="radio" name="r3"> 待加強</label>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+      </div>
+
+    </section>
+
+    <!-- ========================================== -->
+    <!-- TAB 4: 各國童軍徽圖鑑與教學圖卡 -->
+    <!-- ========================================== -->
+    <section id="tab-badges" class="tab-content">
+
+      <div class="card">
+        <div class="card-header">
+          <div class="card-title">
+            <div class="card-title-icon">⚜️</div>
+            <span>世界與各國童軍徽文化圖鑑（教學鷹架補充資料）</span>
+          </div>
+          <span class="card-badge">文化解碼圖鑑庫</span>
+        </div>
+
+        <p style="font-size: 0.9rem; color: var(--text-muted); margin-bottom: 1.5rem;">
+          世界童軍運動組織（WOSM）的所有會員國童軍徽，均以「三葉百合花飾」（Fleur-de-lis）為共同基底，象徵全球四千萬童軍緊密相連；同時，各國亦會將本國最具代表性的國徽、動植物、文化信仰融入其中，是學習「多元文化包容與在地自豪感」的最佳教材。
+        </p>
+
+        <div class="badge-showcase">
+
+          <!-- WOSM -->
+          <div class="badge-card">
+            <div class="badge-svg">
+              <svg viewBox="0 0 100 100" width="70" height="70">
+                <circle cx="50" cy="50" r="46" fill="#4c1d95" />
+                <circle cx="50" cy="50" r="42" fill="none" stroke="#ffffff" stroke-width="2" stroke-dasharray="3 3" />
+                <!-- 百合花飾簡約形狀 -->
+                <path d="M50 20 C46 34 38 42 34 52 C30 62 42 66 50 56 C58 66 70 62 66 52 C62 42 54 34 50 20 Z"
+                  fill="#ffffff" />
+                <path d="M50 20 L50 68" stroke="#4c1d95" stroke-width="1.5" />
+                <circle cx="42" cy="46" r="2.5" fill="#4c1d95" />
+                <circle cx="58" cy="46" r="2.5" fill="#4c1d95" />
+                <!-- 平結象徵 -->
+                <path d="M42 78 C46 75 54 75 58 78" stroke="#ffffff" stroke-width="2.5" fill="none" />
+              </svg>
+            </div>
+            <span class="badge-country">世界童軍運動組織 (WOSM)</span>
+            <h5>全球世界童軍徽</h5>
+            <p><strong>核心寓意：</strong>紫底白花象徵純潔與和平。百合花三葉代表諾言，兩顆五角星代表童軍十條規律，周圍白繩圍成圓圈並打上平結，象徵五大洲童軍親善團結一家。</p>
+          </div>
+
+          <!-- 臺灣 -->
+          <div class="badge-card">
+            <div class="badge-svg">
+              <svg viewBox="0 0 100 100" width="70" height="70">
+                <circle cx="50" cy="50" r="46" fill="#1b4332" />
+                <!-- 百合梅花複合 -->
+                <path d="M50 18 C46 32 36 40 32 50 C28 60 40 64 50 54 C60 64 72 60 68 50 C64 40 54 32 50 18 Z"
+                  fill="#f8fafc" />
+                <!-- 青天白日 -->
+                <circle cx="50" cy="44" r="8" fill="#1d4ed8" />
+                <circle cx="50" cy="44" r="4" fill="#ffffff" />
+                <!-- 梅花意象與綵帶 -->
+                <path d="M35 70 C45 66 55 66 65 70" stroke="#f59e0b" stroke-width="3" fill="none" />
+              </svg>
+            </div>
+            <span class="badge-country">中華民國 (臺灣)</span>
+            <h5>中華民國童軍徽</h5>
+            <p><strong>文化意涵：</strong>以三葉百合融和象徵國花的「梅花」造形，花心鑲嵌「青天白日」國徽，下承寫有「智、仁、勇」三達德字樣的黃色綵帶，象徵堅忍不拔與弘揚中華美德。</p>
+          </div>
+
+          <!-- 日本 -->
+          <div class="badge-card">
+            <div class="badge-svg">
+              <svg viewBox="0 0 100 100" width="70" height="70">
+                <circle cx="50" cy="50" r="46" fill="#991b1b" />
+                <path d="M50 20 C46 34 38 42 34 52 C30 62 42 66 50 56 C58 66 70 62 66 52 C62 42 54 34 50 20 Z"
+                  fill="#ffffff" />
+                <!-- 櫻花圖騰心 -->
+                <circle cx="50" cy="48" r="9" fill="#fbcfe8" />
+                <circle cx="50" cy="48" r="4" fill="#be185d" />
+              </svg>
+            </div>
+            <span class="badge-country">日本 (JAPAN)</span>
+            <h5>日本童軍總會徽</h5>
+            <p><strong>文化意涵：</strong>百合花正中央鑲嵌日本精神象徵「櫻花（Sakura）」圖紋，底色常搭配太陽紅或茶道綠，融合武士道重視承諾、禮節、克己自律與大自然共存的敬畏之心。</p>
+          </div>
+
+          <!-- 英國 -->
+          <div class="badge-card">
+            <div class="badge-svg">
+              <svg viewBox="0 0 100 100" width="70" height="70">
+                <circle cx="50" cy="50" r="46" fill="#1e3a8a" />
+                <path d="M50 18 C46 32 36 40 32 50 C28 60 40 64 50 54 C60 64 72 60 68 50 C64 40 54 32 50 18 Z"
+                  fill="#f8fafc" />
+                <!-- 聖喬治紅十字象徵 -->
+                <rect x="48" y="32" width="4" height="24" fill="#dc2626" />
+                <rect x="38" y="42" width="24" height="4" fill="#dc2626" />
+              </svg>
+            </div>
+            <span class="badge-country">英國 (UNITED KINGDOM)</span>
+            <h5>英國童軍徽 (Scouts UK)</h5>
+            <p><strong>文化意涵：</strong>童軍運動發源地。徽飾保留古典百合花箭頭（指引北極星之意），並納入英格蘭守護聖人「聖喬治十字」，象徵勇氣、保護弱者與榮譽誓言。</p>
+          </div>
+
+          <!-- 美國 -->
+          <div class="badge-card">
+            <div class="badge-svg">
+              <svg viewBox="0 0 100 100" width="70" height="70">
+                <circle cx="50" cy="50" r="46" fill="#1e293b" />
+                <path d="M50 18 C46 32 36 40 32 50 C28 60 40 64 50 54 C60 64 72 60 68 50 C64 40 54 32 50 18 Z"
+                  fill="#d97706" />
+                <!-- 鷹與星條 -->
+                <path d="M42 45 L50 38 L58 45 L50 52 Z" fill="#f8fafc" />
+                <circle cx="50" cy="45" r="3" fill="#dc2626" />
+              </svg>
+            </div>
+            <span class="badge-country">美國 (USA - Scouting America)</span>
+            <h5>美國童軍徽</h5>
+            <p><strong>文化意涵：</strong>在百合花正中展翅立有美國國鳥「白頭海鵰」，胸前配戴星條旗盾牌，象徵守護自由民主、探索拓荒勇氣與自立承擔的公民責任。</p>
+          </div>
+
+        </div>
+      </div>
+
+    </section>
+
+  </main>
+
+  <!-- Floating Print & Quick Actions -->
+  <aside class="print-bar non-printable">
+    <div style="font-size: 0.85rem; font-weight: 600; color: var(--text-main);">
+      🖨️ 教學實用工具：
+    </div>
+    <button class="action-btn action-btn-outline"
+      onclick="switchTab('worksheet', document.getElementById('tab-btn-worksheet')); window.scrollTo({top: 0, behavior: 'smooth'});">
+      前往學習單
+    </button>
+    <button class="action-btn action-btn-primary" onclick="window.print()">
+      列印 / 匯出 PDF
+    </button>
+  </aside>
+
+  <script>
+    // Tab Switching Logic
+    function switchTab(tabId, btnElement) {
+      // Hide all tabs
+      document.querySelectorAll('.tab-content').forEach(tab => {
+        tab.classList.remove('active');
+      });
+
+      // Deactivate all buttons
+      document.querySelectorAll('.nav-btn').forEach(btn => {
+        btn.classList.remove('active');
+      });
+
+      // Activate selected
+      const target = document.getElementById('tab-' + tabId);
+      if (target) {
+        target.classList.add('active');
+      }
+
+      if (btnElement) {
+        btnElement.classList.add('active');
+      }
+    }
+  </script>
+</body>
+
+</html>
